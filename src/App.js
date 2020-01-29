@@ -1,8 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import GoalList from './components/GoalList';
 
-function App() {
+/*class App extends React.Component{
+  render(){
+    return <h1>Hello</h1>
+  }
+}
+*/
+
+const App = () =>{
+
+  const courseGoals = [
+    {id:'g1', text:'Goal 1'},
+    {id:'g2', text:'Goal 2'},
+    {id:'g3', text:'Goal 3'}
+];
+  return  (
+    <div>
+      <h1>Hello JSX code</h1>
+    <GoalList goals={courseGoals}/>
+     </div>
+  );
+};
+
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,5 +45,7 @@ function App() {
     </div>
   );
 }
+*/
 
 export default App;
+
