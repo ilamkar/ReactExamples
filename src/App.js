@@ -18,10 +18,16 @@ const App = () =>{
     {id:'g2', text:'Goal 2'},
     {id:'g3', text:'Goal 3'}
 ];
+
+const addNewGoalHandler=(newGoal)=>{
+courseGoals.push(newGoal);
+
+
+}
   return  (
     <div>
       <h1>Hello JSX code</h1>
-      <NewGoal/>
+      <NewGoal onAddGoal={addNewGoalHandler}/>
     <GoalList goals={courseGoals}/>
      </div>
   );

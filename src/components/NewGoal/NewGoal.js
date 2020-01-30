@@ -2,7 +2,7 @@ import React from 'react';
 
 import './NewGoal.css'
 
-const b=()=>{
+const b=props=>{
 
     const addGoalHandler =event=>{
 
@@ -12,7 +12,7 @@ const b=()=>{
             id: Math.random().toString(),
             text: 'My New Goal'
        };
-       console.log(newGoal);
+     props.onAddGoal();  // props named in app.js
     };
 
     return (
