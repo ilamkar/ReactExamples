@@ -8,11 +8,12 @@ const b=props=>{
 
        event.preventDefault(); // prevent sending request to backend
 
-       const newGoal={
+       const newGoal = 
+{
             id: Math.random().toString(),
             text: 'My New Goal'
-       };
-     props.onAddGoal();  // props named in app.js
+ } ;
+     props.onAddGoal(newGoal);  // props named in app.js
     };
 
     return (

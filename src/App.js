@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}  from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GoalList from './components/GoalList/GoalList';
@@ -13,17 +13,22 @@ import NewGoal from './components/NewGoal/NewGoal';
 
 const App = () =>{
 
-  const courseGoals = [
+  const [courseGoals,setCourseGoals]= useState([
     {id:'g1', text:'Goal 1'},
     {id:'g2', text:'Goal 2'},
     {id:'g3', text:'Goal 3'}
-];
 
-const addNewGoalHandler=(newGoal)=>{
-courseGoals.push(newGoal);
+  ]);
 
 
-}
+const addNewGoalHandler= newGoal =>{
+//  setCourseGoals(courseGoals.concat(newGoal));
+setCourseGoals((prevCourseGoals) =>{
+ return prevCourseGoals.concat(newGoal);
+});
+
+
+};
   return  (
     <div>
       <h1>Hello JSX code</h1>

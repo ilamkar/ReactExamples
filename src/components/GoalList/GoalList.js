@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const abc= props =>{
+const GoalList= props =>{
     return (
         <ul>   
         {
@@ -15,4 +15,4 @@ const abc= props =>{
 };
 
 
-export default abc;
+export default GoalList;
