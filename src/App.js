@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import GoalList from './components/GoalList';
+import GoalList from './components/GoalList/GoalList';
+import NewGoal from './components/NewGoal/NewGoal';
 
 /*class App extends React.Component{
   render(){
@@ -20,6 +21,7 @@ const App = () =>{
   return  (
     <div>
       <h1>Hello JSX code</h1>
+      <NewGoal/>
     <GoalList goals={courseGoals}/>
      </div>
   );
