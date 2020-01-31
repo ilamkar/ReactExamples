@@ -15,4 +15,4 @@ const GoalList= props =>{
 };
 
 
-export default GoalList;
+export default GoalList
